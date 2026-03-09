@@ -2,6 +2,7 @@
 AI service using the Featherless AI API (OpenAI-compatible endpoint).
 Falls back to a rule-based financial response engine if the API is unavailable.
 """
+import os
 import httpx
 import logging
 from typing import Optional, List, Dict, Any
@@ -9,9 +10,9 @@ from services.cache_service import cache, make_cache_key
 
 logger = logging.getLogger(__name__)
 
-FEATHERLESS_API_KEY = "rc_ad4330451ff580078047ec45c0f09483a51c9cf795d466adece1d8cdd0b21267"
-FEATHERLESS_BASE_URL = "https://api.featherless.ai/v1"
-FEATHERLESS_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+FEATHERLESS_API_KEY = os.getenv("FEATHERLESS_API_KEY", "rc_ad4330451ff580078047ec45c0f09483a51c9cf795d466adece1d8cdd0b21267")
+FEATHERLESS_BASE_URL = os.getenv("FEATHERLESS_BASE_URL", "https://api.featherless.ai/v1")
+FEATHERLESS_MODEL = os.getenv("FEATHERLESS_MODEL", "meta-llama/Meta-Llama-3.1-8B-Instruct")
 
 SYSTEM_ANALYST = (
     "You are a professional financial analyst at a top-tier quantitative hedge fund. "
