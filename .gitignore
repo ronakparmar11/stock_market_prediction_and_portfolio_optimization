@@ -1,0 +1,81 @@
+# =========================
+# Python / Backend
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Database files
+*.db
+*.sqlite3
+
+# =========================
+# Machine Learning Models
+# =========================
+
+*.pkl
+*.joblib
+*.h5
+*.model
+*.pt
+
+# =========================
+# Environment variables
+# =========================
+
+.env
+.env.local
+.env.*
+*.env
+
+# =========================
+# Node / Next.js / Frontend
+# =========================
+
+node_modules/
+.next/
+out/
+.vercel/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editors
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Misc
+# =========================
+
+logs/
+*.log
+tmp/
+temp/
+.cache/
